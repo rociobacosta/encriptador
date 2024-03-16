@@ -1,0 +1,68 @@
+body{
+  background-color: rgba(243, 245, 252, 1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  display: inline;
+}
+
+main{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 10%;
+}
+
+.texto-encriptacion {
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea{
+  text-transform: lowercase;
+}
+
+.botones-section{
+  margin-top: auto; /* Hace que el div se alinee al final del contenedor */
+}
+.botones{
+  display: flex;
+  justify-content: space-around;
+  width: 700px;
+
+}
+.btn{
+  width: 170px;
+  height: 50px;
+  border: 2px solid rgba(10, 56, 113, 1);
+  text-align: center;
+  border-radius: 16px;
+  line-height: 40px;
+}
+
+.encr{
+  color: #fff;
+  background-color: rgba(10, 56, 113, 1);
+}
+
+.desenc{
+  color: rgba(10, 56, 113, 1);
+}
+
+.encriptador{
+  background-color: #fff;
+  width: 250px;
+  height: 600px;
+  border-radius: 32px;
+  margin-right: 50px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column; /* Para que los elementos se apilen verticalmente */
+  justify-content: center; /* Para centrar los elementos verticalmente */
+  text-align: center;
+}
+
+footer{
+  text-align: center;
+}
