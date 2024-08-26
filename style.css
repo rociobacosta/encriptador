@@ -3,57 +3,98 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1{
-  display: inline;
+header{
+  margin-top: 1.5%;
 }
 
 main{
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  margin-left: 10%;
+  width: 90vw;
+  height: 87vh;
+  margin-left: 7%;
+  position: relative;
 }
 
 .texto-encriptacion {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .textarea{
+  position: absolute;
   text-transform: lowercase;
+  width: 50vw;
+  height: 60vh;
+  margin: 5px;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2%;
+  font-size: 2em;
+  font-style: normal;
+  background:  rgba(243, 245, 252, 1);
 }
 
+.textarea::placeholder{
+  color: rgba(10, 56, 113, 1);
+}
+
+.textarea:focus,
+.textarea:active{
+  border: none;
+  outline: none;
+}
+
+/* section botones final */
 .botones-section{
-  margin-top: auto; /* Hace que el div se alinee al final del contenedor */
+ margin-top: auto; /* Hace que el div se alinee al final del contenedor */
+ margin-left: 4%;
+} 
+
+.area-span{
+  margin: 5px 30px;
 }
 .botones{
   display: flex;
-  justify-content: space-around;
-  width: 700px;
-
+  width: 50vw;
+  height: 12vh;
 }
-.btn{
-  width: 170px;
-  height: 50px;
+.btn-encriptar,
+.btn-desencriptar{
+  width: 40%;
+  height: 8vh;
   border: 2px solid rgba(10, 56, 113, 1);
   text-align: center;
-  border-radius: 16px;
-  line-height: 40px;
+  border-radius: 50px;
+  margin: 1% 3%;
+  font-size: 1.5em;
+  transition: transform 0.2s ease; 
 }
 
-.encr{
+.btn-encriptar{
   color: #fff;
   background-color: rgba(10, 56, 113, 1);
 }
 
-.desenc{
+.btn-desencriptar{
   color: rgba(10, 56, 113, 1);
 }
 
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
+.btn-copiar{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+
+
+/* section encriptador */
 .encriptador{
   background-color: #fff;
-  width: 250px;
-  height: 600px;
+  width: 17vw;
+  height: 65vh;
   border-radius: 32px;
   margin-right: 50px;
   padding: 5%;
@@ -61,8 +102,144 @@ main{
   flex-direction: column; /* Para que los elementos se apilen verticalmente */
   justify-content: center; /* Para centrar los elementos verticalmente */
   text-align: center;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.5);
 }
 
+.encriptador h3{
+ font-size: 20px;
+ font-weight: bold;
+ padding-top: 15px;
+ padding-bottom: 20px;
+ color: rgba(52, 58, 64, 1);
+ line-height: 26px;
+}
+
+.encriptador p{
+ font-size: 16px;
+ font-weight: lighter;
+ color: rgba(73, 80, 87, 1);
+ line-height: 20px;
+}
+
+.contenedor-resultado{
+  width: 18vw;
+  height: 60vh;
+  top: 2%;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.contenedor-resultado p{
+  color: #495057;
+  font-size: 25px;
+}
+
+.contenedor-copiar{
+  top:80%;
+  width: 20%;
+  position: absolute;
+}
+
+.btn-copiar{
+  width: 80%;
+  height: 6vh;
+  border-radius: 24px;
+  background-color: #ffffff;
+  color: #0A3871;
+  font-size: 1.3em;
+  border: 1px solid #0A3871;
+  transition: transform 0.2s ease; 
+}
+
+.ocultar{
+  display: none;
+}
+
+/* footer */
 footer{
   text-align: center;
+}
+footer p{
+  font-size: 1em;
+  color:#607274;
+  font-weight: lighter;
+}
+
+/* responsive */
+
+@media (max-width: 1024px){
+   
+  main{
+    display: flex;
+    flex-direction: row;
+  }
+  .texto-encriptacion{
+    width: 98%;
+  }
+  .textarea{
+    width: 80%;
+    height: 60%;
+    padding-left: 10%;
+    padding-top: 5%;
+  }
+  .area-span{
+    width: 80%;
+    top: 56%;
+    left: 10%;
+    position: absolute;
+  }
+  .area-span span{
+    font-size: 0.9em;
+  }
+  /* botones */
+  .botones{
+    width: 90%;
+    top: 60%;
+    left: 10%;
+    position: absolute;
+  }
+  .btn-encriptar,
+  .btn-desencriptar{
+    width: 60%;
+    border-radius: 1.2em;
+    font-size: 1.3em;
+  }
+
+  .encriptador{
+    width: 74%;
+    height: 20%;
+    left: 12%;
+    top:72%;
+    position: absolute;
+  }
+
+  .mensaje{
+    width: 98%;
+    top:1%
+  }
+  .encriptador img{
+    display: none;
+    visibility: hidden;
+  }
+  footer p{
+    margin: 3%;
+    font-size: 0.8em;
+  }
+  .contenedor-resultado{
+    width: 90%;
+    top: 10%;
+    height: 80%;
+    position: absolute;
+  }
+
+  .contenedor-copiar{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+  }
+  .btn-copiar{
+    width: 80%;
+    height: 4vh;
+  }
 }

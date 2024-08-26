@@ -1,40 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
   <title>Encriptador</title>
 </head>
 <body>
   <header>
-    <h1><img class="logo" src="./img/Logo.png" alt="">
+    <h1><img class="logo" src="./img/Logo.png" alt="logo">
   </header>
    <main>
     <section class="texto-encriptacion">
       <textarea class="textarea" name="texto" id="texto" rows="30" cols="10" placeholder="Ingrese el texto aqui"></textarea>
       <div class="botones-section">
-        <span><img src="./img/bi_exclamation-circle-fill.png" alt=""> Solo letras minúsculas y sin acentos</span>
+        <div class="area-span">
+          <span><img src="./img/bi_exclamation-circle-fill.png" alt="alerta"> Solo letras minúsculas y sin acentos</span>
+        </div>
          <div class="botones">
-          <button class="btn encr" onclick="encriptar()" type="button">Encriptar</>
-          <button class="btn desenc" onclick="desencriptar()" type="button">Desencriptar</>
+          <button class="btn-encriptar" type="button">Encriptar</>
+          <button class="btn-desencriptar" type="button">Desencriptar</>
          </div>
-        
       </div>
     </section>
-    <section class="encriptador">
-      <img src="./img/Muñeco.png" alt="" id="muñeco">
+    <section class="encriptador" id="encriptador">
+      <img src="./img/Muñeco.png" alt="" id="munieco">
       <div class="mensaje">
         <h3 id="mensaje-principal">Ningún mensaje fue encontrado</h3>
         <p id="mensaje-secundario">Ingresa el texto que desees encriptar o desencriptar.</p>
-        <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
       </div>
-  
+      <div class="contenedor-copiar">
+        <button class="btn-copiar ocultar">Copiar</button>
+      </div>
+      <div class="contenedor-resultado">
+        <p class="texto-resultado"></p>
+      </div>
     </section>
 
    </main>
    <footer>
-    <p>Desarrollado con ❤️ por Rocio Belén Acosta</p>
+    <p>Cambio de footer para prueba</p>
    </footer>
    <script src="index.js"></script>
 </body>
